@@ -12,7 +12,7 @@
       <% @submissions.each do |submission| %>
         <tr>
           <td><%= submission.name %></td>
-          <td><%= submission.github_repo %></td>
+          <td><a href="<%= submission.github_repo %>"><%= submission.github_repo %></a></td>
           <td><%= submission.is_study_jam ? 'Study Jam' : 'Task' %></td>
         </tr>
       <% end %>
