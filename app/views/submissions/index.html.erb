@@ -1,0 +1,21 @@
+<h1>Submitted URLs</h1>
+<div class="table-container">
+  <table class="submission-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>GitHub Repo</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @submissions.each do |submission| %>
+        <tr>
+          <td><%= submission.name %></td>
+          <td><%= submission.github_repo %></td>
+          <td><%= submission.is_study_jam ? 'Study Jam' : 'Task' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
